@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f4f0" />
+    <meta name="description"
+        content="NOVA — kundalik hayot uchun zamonaviy mahsulotlar. Tez yetkazib berish va qulay xarid." />
+    <title>NOVA — zamonaviy xaridlar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="announcement"><span>✦</span> Toshkent bo‘ylab 300 000 so‘mdan yuqori buyurtmalarga yetkazib berish bepul
+        <span>✦</span></div>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="NOVA bosh sahifa"><span class="brand-mark">N</span><span>NOVA<span
+                    class="brand-dot">.</span></span></a>
+        <nav class="main-nav" aria-label="Asosiy navigatsiya"><a href="#shop">Katalog</a><a href="#story">Biz
+                haqimizda</a><a href="#footer">Aloqa</a></nav>
+        <div class="header-actions">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search"
+                    placeholder="Mahsulot qidirish..." aria-label="Mahsulot qidirish" /><kbd>⌘ K</kbd></label>
+            <button class="icon-button heart-button" aria-label="Saralanganlar">♡</button>
+            <button class="cart-trigger" id="openCart" aria-label="Savatni ochish"><span
+                    class="cart-icon">▱</span><span>Savat</span><b id="cartCount">0</b></button>
+        </div>
+        <button id="mobileSearch" class="mobile-search icon-button" aria-label="Qidirish">⌕</button>
+    </header>
+    <main id="top">
+        <section class="hero page-wrap">
+            <div class="hero-copy">
+                <div class="eyebrow"><span class="eyebrow-line"></span> YANGI MAVSUM · 2025</div>
+                <h1>Har kuningizga<br /><em>yaxshi kayfiyat.</em></h1>
+                <p>O‘ylab tanlangan, uzoq xizmat qiladigan va hayotingizga chiroy qo‘shadigan buyumlar.</p><a
+                    class="primary-button" href="#shop">Kashf qilish <span>↗</span></a>
+                <div class="hero-proof">
+                    <div class="avatar-stack"><i>J</i><i>M</i><i>S</i></div><span><strong>2 400+</strong> mamnun
+                        xaridor</span><span class="proof-stars">★★★★★</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image"></div>
+                <div class="hero-note"><span class="note-spark">✳</span>
+                    <div><b>Sevimli tanlov</b><small>Har bir detalda sifat</small></div><span
+                        class="note-arrow">↗</span>
+                </div>
+                <div class="hero-stamp">NOVA<br />ESSENTIALS</div>
+            </div>
+            <div class="hero-side-label">TANLANGANLAR · 01—08</div>
+        </section>
+        <section class="category-strip page-wrap" aria-label="Kategoriyalar">
+            <div class="category-heading"><span>01 /</span> O‘ZINGIZGA MOSINI TOPING</div>
+            <div class="category-list" id="categoryList"></div>
+        </section>
+        <section id="shop" class="shop-section page-wrap">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow"><span class="eyebrow-line"></span> YANGI VA SARALANGAN</div>
+                    <h2>Do‘kon <span class="muted-title">/ 01</span></h2>
+                </div>
+                <div class="sort-wrap"><span id="resultsCount">Barcha mahsulotlar</span><select id="sortSelect"
+                        aria-label="Saralash">
+                        <option value="featured">Tavsiya etilgan</option>
+                        <option value="price-asc">Avval arzonlari</option>
+                        <option value="price-desc">Avval qimmatlari</option>
+                        <option value="newest">Yangilari</option>
+                    </select></div>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+            <div class="empty-state" id="emptyState" hidden><span>⌕</span>
+                <h3>Hech narsa topilmadi</h3>
+                <p>Boshqa nom bilan qidirib ko‘ring yoki filtrni o‘zgartiring.</p><button class="text-button"
+                    id="resetFilters">Filtrlarni tozalash ↗</button>
+            </div>
+        </section>
+        <section class="story-section page-wrap" id="story">
+            <div class="story-image"></div>
+            <div class="story-copy">
+                <div class="eyebrow"><span class="eyebrow-line"></span> NOVA FALSAFASI</div>
+                <h2>Kamroq, ammo<br /><em>yaxshiroq.</em></h2>
+                <p>Biz keraksiz shovqinsiz, o‘z vazifasini chiroyli bajaradigan mahsulotlarni tanlaymiz. Har bir buyum —
+                    kundalik hayotga kichik bir quvonch.</p><a class="text-button" href="#shop">Bizning tanlovimiz
+                    <span>↗</span></a>
+            </div>
+            <div class="story-number">Nº 01 — 25</div>
+        </section>
+        <section class="newsletter page-wrap">
+            <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> YANGILIKLARDAN XABARDOR BO‘LING</div>
+                <h2>Yaxshi narsalarni<br />o‘tkazib yubormang.</h2>
+            </div>
+            <form id="newsletterForm"><label for="emailInput">Elektron pochtangiz</label>
+                <div class="email-field"><input id="emailInput" type="email" placeholder="siz@email.uz"
+                        required /><button type="submit" aria-label="Obuna bo‘lish">↗</button></div><small>Yangiliklar
+                    va maxsus takliflar. Istalgan payt obunani bekor qilishingiz mumkin.</small>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-main page-wrap"><a class="brand" href="#top"><span class="brand-mark">N</span><span>NOVA<span
+                        class="brand-dot">.</span></span></a>
+            <p>Har kun uchun yaxshi tanlov.</p>
+            <div class="footer-links"><a href="#shop">Katalog</a><a href="#story">Biz haqimizda</a><a
+                    href="mailto:salom@nova.uz">Biz bilan bog‘laning</a></div>
+            <div class="social-links"><a href="#footer" aria-label="Instagram">ig</a><a href="#footer"
+                    aria-label="Telegram">tg</a></div>
+        </div>
+        <div class="footer-bottom page-wrap"><span>© 2025 NOVA. Barcha huquqlar himoyalangan.</span><span>Toshkent,
+                O‘zbekiston&nbsp; ↗</span></div>
+    </footer>
+    <div class="overlay" id="overlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Savat" aria-hidden="true">
+        <div class="drawer-header">
+            <div><span class="eyebrow">SIZNING TANLOVINGIZ</span>
+                <h2>Savat <span id="drawerCount">(0)</span></h2>
+            </div><button id="closeCart" class="close-button" aria-label="Savatni yopish">×</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div id="cartEmpty" class="cart-empty"><span>▱</span>
+            <h3>Savat hozircha bo‘sh</h3>
+            <p>O‘zingizga yoqqan mahsulotlarni qo‘shing.</p><button class="primary-button" id="continueShopping">Xaridni
+                davom ettirish <span>↗</span></button>
+        </div>
+        <div class="cart-summary" id="cartSummary">
+            <div class="summary-row"><span>Mahsulotlar</span><span id="subtotal">0 so‘m</span></div>
+            <div class="summary-row"><span>Yetkazib berish</span><span id="delivery">—</span></div>
+            <div class="summary-total"><span>Jami</span><strong id="total">0 so‘m</strong></div><button
+                class="checkout-button" id="checkoutButton">Buyurtma berish <span>↗</span></button>
+            <p class="secure-note">⌑ &nbsp; Xavfsiz to‘lov · Yetkazish 1–2 kun</p>
+        </div>
+    </aside>
+    <dialog id="checkoutDialog" class="checkout-dialog"><button id="closeCheckout" class="close-button dialog-close"
+            aria-label="Yopish">×</button>
+        <div class="eyebrow"><span class="eyebrow-line"></span> DEYARLI TAYYOR</div>
+        <h2>Buyurtmani<br /><em>rasmiylashtiring.</em></h2>
+        <form id="checkoutForm"><label>Ism familiya<input name="name" placeholder="Ismingiz"
+                    required /></label><label>Telefon raqam<input name="phone" type="tel"
+                    placeholder="+998 90 123 45 67" pattern="[+]?[0-9 ()-]{9,}" required /></label><label>Yetkazish
+                manzili<input name="address" placeholder="Shahar, ko‘cha, uy" required /></label>
+            <div class="checkout-total">Jami <strong id="checkoutTotal">0 so‘m</strong></div><button
+                class="checkout-button" type="submit">Buyurtmani tasdiqlash <span>↗</span></button>
+        </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
